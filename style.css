@@ -22,19 +22,37 @@ html, body {
   --color: hsl(0, 0%, 100%);
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
   --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+  --label-size: 9px;
+  --label-color: hsl(0, 0%, 0%);
+  --shadow-secondary-hue: 60;
+  --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
+  position: relative;
 }
 
-button  {
+.cyber-btn {
+  position: relative;
   background-color: var(--primary);
-  font-family: Cyber, sans-serif;
-  outline: transparent;
   color: var(--color);
-  border: 0;
-  border-right: solid 3px var(--shadow-primary);
+  font-family: Cyber, sans-serif;
   text-transform: uppercase;
   font-size: var(--font-size);
+  outline: transparent;
+  border: 0;
+  border-right: solid 3px var(--shadow-primary);
   letter-spacing: 2px;
   font-weight: bold;
   padding: 32px 64px;
   clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 40%);
+}
+
+.cyber-btn .cyber-btn__tag {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  transform: translateY(50%);
+  font-size: var(--label-size);
+  color: var(--label-color);
+  background: var(--shadow-secondary);
+  padding: 1px 4px;
+  border-left: solid 2px var(--shadow-primary);
 }
