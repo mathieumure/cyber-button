@@ -1,8 +1,40 @@
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+
 html, body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Cyber, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background: linear-gradient(90deg, #f5ed00 60%, #e6de00 60%), #fff700;
+}
+
+:root {
+  --primary-hue: 0;
+  --primary-lightness: 50;
+  --font-size: 26px;
+  --shadow-primary-hue: 180;
+  --color: hsl(0, 0%, 100%);
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
+  --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+}
+
+button  {
+  background-color: var(--primary);
+  font-family: Cyber, sans-serif;
+  outline: transparent;
+  color: var(--color);
+  border: 0;
+  border-right: solid 3px var(--shadow-primary);
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 32px 64px;
+  clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 40%);
 }
